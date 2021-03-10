@@ -1,0 +1,8 @@
+.Pokecard {
+    box-sizing: border-box;
+    width: 25%;
+    height: auto;
+    border: 1px grey solid;
+    border-radius: 5px;
+    display: inline-block;
+}
