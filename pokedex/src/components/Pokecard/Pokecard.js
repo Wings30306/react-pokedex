@@ -6,15 +6,7 @@ import "./Pokecard.css"
 /**
  * Helper function to create 3-digit id
  */
-function threeDigitID(id) {
-    let idAsString = id.toString()
-    if (idAsString.length === 1) {
-        return "00" + idAsString
-    } else if (idAsString.length === 2) {
-        return "0" + idAsString
-    }
-    return idAsString
-}
+let threeDigitID = (id) => (id <= 999 ? `00${id}`.slice(-3): id)
 
 function imageString(id) {
     return "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + threeDigitID(id) + ".png"
