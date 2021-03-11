@@ -1,0 +1,8 @@
+.Pokedex {
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.isWinner {
+    background-color: greenyellow;
+}

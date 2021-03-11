@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Pokecard from "../Pokecard/Pokecard"
+import "./Pokedex.css"
 
 class Pokedex extends Component {
     static defaultProps = {
@@ -17,15 +18,15 @@ class Pokedex extends Component {
 
     render() {
         const pokemonList = this.props.pokemonList
-        console.log(pokemonList)
         let cards = []
         for (let i=0; i < pokemonList.length; i++) {
             let card = <Pokecard pokemon={pokemonList[i]}/>
             cards.push(card)
         }
-        
+
+      
         return (
-            <div className="Pokedex" >
+            <div className={`Pokedex ${this.props.isWinner && "isWinner"}`} >
                 {cards}
             </div>
         )
